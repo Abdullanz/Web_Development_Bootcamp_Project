@@ -41,7 +41,7 @@ app.set("view engine", "ejs"); //To setup the ejs file types
 app.use(express.static(__dirname + "/public")); //To access styling sheets
 app.use(methodOverride("_method")); //
 
-//seedDB(); //To seed the database with default data
+seedDB(); //To seed the database with default data
 
 
 /**
