@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+
+    <!-- 
+    Add labals to the form data and center the whole page if possible and add a bit of graphics if needed for styling
+ -->
+
+    <div class="container" style="margin-bottom:6.8em;">
+        <h1>التسجيل</h1>
+
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="اسم المستخدم">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="كلمة السر">
+            </div>
+            <div class="form-group">
+                <input type="text" name="adminCode" placeholder="كود الإداري">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-md">سجل</button>
+            </div>
+        </form>
+
+        <a href="/campgrounds">ارجع للوراء</a>
+    </div>
+    <%- include("partials/footer") %>

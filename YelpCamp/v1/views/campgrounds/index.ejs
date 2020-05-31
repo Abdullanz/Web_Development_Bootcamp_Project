@@ -1,0 +1,51 @@
+<%- include("../partials/header") %>
+
+    <% if (currentUser && currentUser.isAdmin) { %>
+        <h1>أنت مدير</h1>
+        <% } %>
+
+
+            <div class="container">
+                <header class="jumbotron">
+                    <div>
+                        <h1>أهلا بك في برنامجنا </h1>
+                        <p>شاهد المنتجات المنتقاة من حول العالم بعناية</p>
+                        <p>
+                            <a class="btn btn-primary btn-lg" href="/campgrounds/new">أضف منتجا جديدا</a>
+                        </p>
+                    </div>
+                </header>
+
+                <div class="row flex-container" style="display: flex; flex-wrap: wrap;">
+                    <% campgrounds.forEach(function(campground){ %>
+                        <div class="card-deck col-md-3 col-sm-6">
+                            <div class="card" style="margin-bottom: 2em;">
+                                <img class="card-img-top wow" src="<%= campground.image  %>" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="text-align: right;">
+                                        <%= campground.name  %>
+                                    </h5>
+
+                                    <% if (campground.rating === 0) { %>
+                                        <em style="text-align: right;">لا تعليقات بعد</em>
+                                        <% } else { %>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star <% if (campground.rating > 1.5) { %> checked <% } %>"></span>
+                                            <span class="fa fa-star <% if (campground.rating > 2.5) { %> checked <% } %>"></span>
+                                            <span class="fa fa-star <% if (campground.rating > 3.5) { %> checked <% } %>"></span>
+                                            <span class="fa fa-star <% if (campground.rating > 4.5) { %> checked <% } %>"></span>
+                                            <% } %>
+
+
+
+                                                <p>
+                                                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">للمزيد</a>
+                                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <%    }); %>
+
+                </div>
+            </div>
+            <%- include("../partials/footer") %>

@@ -1,0 +1,13 @@
+.delete_form {
+    display: inline;
+}
+
+.checked {
+    color: orange;
+}
+
+.wow {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
