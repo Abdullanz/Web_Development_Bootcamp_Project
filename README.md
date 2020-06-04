@@ -4,10 +4,10 @@ The YelpCamp Project was the major project for The Web Developer Bootcamp By Col
 I learned a lot while working on this project. Specifically, Server-Side Development, User-Authentication, User-Authorization, Embedded JavaScript and much more. I also liked working on nodeJS, and npm libraries because it provides an amazing resources for developers to deploy a project.
 
 
-# Description
+## Description
 
 
-# Libraries
+## Libraries
 
 
 ## Design approach
